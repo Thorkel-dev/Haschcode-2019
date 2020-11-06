@@ -43,7 +43,7 @@ To do this, a random image is chosen from the given list.
 We are going to look for the combination of images, to form the slide, which yields as many points as possible.
 So we compare the tags of our image with all the other images. Once found, we start again with the new slide. And those until as long as there are images left. 
 
-### [Score 🏆](images\Result)
+### [Score 🏆](images/Resultat)
 This is calculated directly by the script.
 File | Pictures | Slides | Unrelated pictures | Points | Time
 ------------ | ------------- | ------------ | ------------- | ------------ | ------------- |
@@ -57,4 +57,4 @@ e_shiny_selfies.txt | 80 000 | 40 000 | 2 | 371 863 | 00:46:57
 ### Limits ⚠️
 - The first image is chosen at random. This varies the results.
 - The method gives a high score but is very time consuming.
-- The comments of the code are in French 🇫🇷
+- The comments of the code are in French 🇫🇷.
