@@ -43,7 +43,7 @@ To do this, a random image is chosen from the given list.
 We are going to look for the combination of images, to form the slide, which yields as many points as possible.
 So we compare the tags of our image with all the other images. Once found, we start again with the new slide. And those until as long as there are images left. 
 
-### [Score 🏆](images\Resultat.png)
+### [Score 🏆](images/Resultat.png)
 This is calculated directly by the script.
 File | Pictures | Slides | Unrelated pictures | Points | Time
 ------------ | ------------- | ------------ | ------------- | ------------ | ------------- |
