@@ -1,36 +1,60 @@
 # Hasch Code 2019
- 
+
+ [![Codacy Badge](https://app.codacy.com/project/badge/Grade/27f12e9c8f1c4144a54253ea77c98a3c)](https://www.codacy.com/gh/EdouardGautier/Haschcode-2019/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EdouardGautier/Haschcode-2019&amp;utm_campaign=Badge_Grade)
+
 <p align="center">
 <img  src="images\logo.png" alt="Hash Code Logo" width="400" height="">
 </p>
 
-## Introduction :pencil:
-Concours organisé par Google en 2019. L’objectif est de répondre à une problématique donnée, sur le thème du traitement de donné.
-Le script est fait en Python V3. Aucune bibliothèque externe n’est nécessaire.
-Les résultats sont calculés et affiché directement dans le terminal. Les fichiers à traiter sont dans Haschcode 2019\qualification_round_2019.in. 
+## Introduction ✏️
+Competition organised by Google in 2019. The objective is to answer a given problem, on the theme of data processing.
+The script is made in Python V3. No external library is needed.
+The results are calculated and displayed directly in the terminal. The files to be processed are [here](qualification_round_2019.in).
 
-## [Problématique 📷](hashcode2019_qualification_task.pdf)
+## [Issue 📷](hashcode2019_qualification_task.pdf)
+As the saying goes, "a picture is a thousand words".
+We agree, photos are an important part of contemporary digital and cultural life. Around 2.5 billion people worldwide carry a camera, in the form of a smartphone, in their pocket every day. We are also making good use of them, taking more photos than ever before (in 2017, Google Photos announced that it was supporting more than 1.2 billion photos and videos a day). 
+The rise of digital photography creates an interesting challenge: what should we do with all these photos? In this competition issue, we will explore the idea of composing a slideshow from a collection of photos.
 
-Comme le dit le proverbe, "une image est un millier de mots".
-Nous sommes d'accord, les photos sont une importante part de la vie numérique et culturelle contemporaine. Environ 2,5 milliards dans le monde entier, les gens portent un appareil photo, sous forme de smartphone, dans leur de poche tous les jours. Nous en faisons aussi bon usage, en prenant plus de photos que jamais (en 2017, Google Photos a annoncé qu'il soutenait plus de 1,2 milliard de photos et des vidéos par jour). 
-L'essor de la photographie numérique crée un défi intéressant : que devons-nous faire avec toutes ces photos ? Dans cette problématique de concours, nous allons explorer l'idée de composer un diaporama à partir d'une collection de photos.
+### Objectives ✔️
+Based on the list of photos and the tags associated with each one, arrange the photos into a slide show that is as interesting as possible.
 
-### Objectif ✔️
-En fonction de la liste des photos et des balises associées à chacune d'entre elles, classez les photos en un diaporama aussi intéressant que possible.
+A photo is described by a set of tags. For example, a photo with a cat on a beach, on a sunny afternoon, could be with the following tags : [cat, beach, sun]. The orientation of each photo is either horizontal or vertical.
 
-Une photo est décrite par un ensemble de balises. Par exemple, une photo avec un chat sur une plage, pendant un après-midi ensoleillé, peut être avec les balises suivantes : [chat, plage, soleil]. L'orientation de chaque photo est soit horizontale, soit verticale.
+A slide show is an ordered list of slides. Each slide contains one or the other:
+- A single horizontal photo
+- Two vertical photos side by side
 
-Un diaporama est une liste ordonnée de diapositives. Chaque diapositive contient l'une ou l'autre :
-- Une seule photo horizontale
-- Deux photos verticale côte à côte
+### Score Calculation 🏅
+The slide show is graded according to the interest of the transitions between each pair of its following slides have.
+We want the transitions to have something in common to preserve continuity (the two slides should not be totally different).
+The similarity of two vertical photos on the same slide is not taken into account for the notation.
+This means that two photos may, but need not, have tags in common.
 
-### Calcul du Score 🏅
-Le diaporama est noté en fonction de l'intérêt des transitions entre chaque paire de ses diapositives suivantes ont.
-Nous voulons que les transitions aient quelque chose en commun pour préserver la continuité (les deux diapositives ne doivent pas être totalement différentes).
-La similitude de deux photos verticales sur une même diapositive n'est pas prise en compte pour la notation.
-Cela signifie que deux photos peuvent, mais ne doivent pas nécessairement, avoir des tags en commun.
+For the next two slides S i and S i+1, the interest factor is the minimum (the smallest number of the three):
+- The number of common tags between S i and S i+1
+- The number of tags in S i but not in S i+1
+- The number of tags in S i+1 but not in S i .
 
-Pour les deux diapositives suivantes S i et S i+1 , le facteur d'intérêt est le minimum (le plus petit numéro des trois):
-- Le nombre de balises communes entre S i et S i+1
-- Le nombre de balises dans S i mais pas dans S i+1
-- Le nombre de balises dans S i+1 mais pas dans S i .
+## Solution 🔨
+### Principle 📘
+This is a rather crude method. 
+To do this, a random image is chosen from the given list.
+We are going to look for the combination of images, to form the slide, which yields as many points as possible.
+So we compare the tags of our image with all the other images. Once found, we start again with the new slide. And those until as long as there are images left. 
+
+### [Score 🏆](images\Result)
+This is calculated directly by the script.
+File | Pictures | Slides | Unrelated pictures | Points | Time
+------------ | ------------- | ------------ | ------------- | ------------ | ------------- |
+a_example.txt | 4 | 3 | 0 | 2 | 00:00:00
+b_lovely_landscapes.txt | 80 000 | 80 000 | 11 993 | 204 018 | 00:36:15
+c_memorable_moments.txt | 1 000 | 750 | 26 | 1 530 | 00:00:00
+d_pet_pictures.txt | 90 000 | 60 000 | 12 | 266 253 | 00:40:35
+e_shiny_selfies.txt | 80 000 | 40 000 | 2 | 371 863 | 00:46:57
+**Total** | **251 004** | **180 753** | **12 033** | **843 966** | **02:03:47** |
+
+### Limits ⚠️
+- The first image is chosen at random. This varies the results.
+- The method gives a high score but is very time consuming.
+- The comments of the code are in French 🇫🇷
