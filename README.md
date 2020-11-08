@@ -6,6 +6,7 @@
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=EdouardGautier&repo=Haschcode-2019&theme=default_repocard&show_icons=true"/>
     </a>
 </p>
+
 Competition organised by Google in 2019. The objective is to answer a given problem, on the theme of data processing.
 The script is made in Python V3. No external library is needed.
 The results are calculated and displayed directly in the terminal. The files to be processed are [here](qualification_round_2019.in).
