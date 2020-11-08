@@ -1,11 +1,11 @@
 import random as rd
 
-fichier_reponse = "projet/qualification_round_2019.in/projet_reponse.txt"
-fichier_1 = "projet/qualification_round_2019.in/a_example.txt"
-fichier_2 = "projet/qualification_round_2019.in/b_lovely_landscapes.txt"
-fichier_3 = "projet/qualification_round_2019.in/c_memorable_moments.txt"
-fichier_4 = "projet/qualification_round_2019.in/d_pet_pictures.txt"
-fichier_5 = "projet/qualification_round_2019.in/e_shiny_selfies.txt"
+fichier_reponse = "Haschcode 2019/qualification_round_2019.in/projet_reponse.txt"
+fichier_1 = "Haschcode 2019/qualification_round_2019.in/a_example.txt"
+fichier_2 = "Haschcode 2019/qualification_round_2019.in/b_lovely_landscapes.txt"
+fichier_3 = "Haschcode 2019/qualification_round_2019.in/c_memorable_moments.txt"
+fichier_4 = "Haschcode 2019/qualification_round_2019.in/d_pet_pictures.txt"
+fichier_5 = "Haschcode 2019/qualification_round_2019.in/e_shiny_selfies.txt"
 
 liste_fichier = [fichier_1, fichier_2, fichier_3, fichier_4, fichier_5]
 p = int(100)
@@ -251,6 +251,6 @@ if __name__ == "__main__":
     points_total = int()
     for fichier in liste_fichier:
         print(fichier)
-        points_total += image_init(fichier_1)
+        points_total += image_init(fichier)
     print(135 * "-","\n")
     print("Score total:", points_total,'\n')

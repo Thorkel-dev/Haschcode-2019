@@ -1,9 +1,11 @@
 # Hasch Code 2019
-
- [![Codacy Badge](https://app.codacy.com/project/badge/Grade/27f12e9c8f1c4144a54253ea77c98a3c)](https://www.codacy.com/gh/EdouardGautier/Haschcode-2019/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EdouardGautier/Haschcode-2019&amp;utm_campaign=Badge_Grade)
-
+<img src="https://img.shields.io/static/v1?style=flat&message=Python&logo=python&labelColor=FFD43B&color=FFD43B&logoColor=306998&label=%20"/> [![Codacy Badge](https://app.codacy.com/project/badge/Grade/27f12e9c8f1c4144a54253ea77c98a3c)](https://www.codacy.com/gh/EdouardGautier/Haschcode-2019/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EdouardGautier/Haschcode-2019&amp;utm_campaign=Badge_Grade) <img src="https://img.shields.io/github/last-commit/Edouardgautier/Haschcode-2019
+"/>
 <p align="center">
 <img  src="images\logo.png" alt="Hash Code Logo" width="400" height="">
+</p>
+<p align=center>
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=EdouardGautier&repo=Haschcode-2019&theme=default_repocard&show_icons=true"/>
 </p>
 
 ## Introduction ✏️
@@ -55,6 +57,7 @@ e_shiny_selfies.txt | 80 000 | 40 000 | 2 | 371 863 | 00:46:57
 **Total** | **251 004** | **180 753** | **12 033** | **843 966** | **02:03:47** |
 
 ### Limits ⚠️
-- The first image is chosen at random. This varies the results.
-- The method gives a high score but is very time consuming.
-- The comments of the code are in French 🇫🇷.
+- The first image is chosen at random. This varies the results
+- The method gives a high score but is very time consuming
+- No unit test
+- The comments of the code are in French 🇫🇷
