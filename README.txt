@@ -56,6 +56,7 @@ start again with the new slide. And those until as long as there are images left
 ### Score
 This is calculated directly by the script.
 File                    | Pictures | Slides  | Unrelated pictures | Points  | Time
+----------------------- | -------- | ------- | ------------------ | ------- | --------
 a_example.txt           | 4        | 3       | 0                  | 2       | 00:00:00
 b_lovely_landscapes.txt | 80 000   | 80 000  | 11 993             | 204 018 | 00:36:15
 c_memorable_moments.txt | 1 000    | 750     | 26                 | 1 530   | 00:00:00
