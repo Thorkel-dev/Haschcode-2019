@@ -1,6 +1,5 @@
 # Hasch Code 2019
 
-## Introduction ✏
 Competition organised by Google in 2019. The objective is to answer a given 
 problem, on the theme of data processing.
 The script is made in Python V3. No external library is needed.
