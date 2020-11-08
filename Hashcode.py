@@ -230,7 +230,7 @@ def image_init(fichier_lecure):
         points += score(image_ancienne, set(tag))
         image_ancienne = set(tag)
         liste_reponse.append(reponse)
-        q = ((n - len(image)))
+        q = (n - len(image))
         progression(iteration = q, total = n,prefix="Chargement des données\t")
     print()
     slides = reponse_ecriture(liste_reponse)
