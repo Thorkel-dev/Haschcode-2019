@@ -36,7 +36,7 @@ def lecture(fichier):
         progression(q, prefix= "Lecture des données\t")
     f.close()
     print()
-    return
+    return None
 
 def comparaison(tag):
     """
@@ -50,8 +50,6 @@ def comparaison(tag):
     ..note: Si on ne trouve pas de points commun, une image est choisie au hasard 
     """
     score_max = int()
-    score_a = int()
-    set_tag = set(tag)
     for set_image in image:
         score_a = score(image_ancienne, set_image)
         if score_a > score_max:
@@ -75,7 +73,6 @@ def image_verticale(tag):
 
     """
     score_max = int()
-    set_tag = set(tag)
     for set_image in image:
         if "V" in set_image:
             score_a = score(image_ancienne, set_image)
@@ -179,7 +176,7 @@ def reponse_ecriture(reponse):
     fichier.close()
     return len(reponse)
 
-def progression (iteration, total=100, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
+def progression (iteration, total=100, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', print_end = "\r"):
     """
     Appel en boucle pour créer une barre de progression du terminal
 
@@ -196,13 +193,13 @@ def progression (iteration, total=100, prefix = '', suffix = '', decimals = 1, l
     :type: int
     :param fill: caractère de remplissage de la barre
     :type: str
-    :param printEnd: caractère de fin
+    :param print_end: caractère de fin
     :type: str
     """
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
-    filledLength = int(length * iteration // total)
-    bar = fill * filledLength + '-' * (length - filledLength)
-    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end = printEnd)
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
+    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end = print_end)
     # Print New Line on Complete
     if iteration >= total: 
         print()
@@ -221,17 +218,13 @@ def image_init(fichier_lecure):
     global image_ancienne
     liste_reponse = list()
     points = int()
-    itteration = int()
-    image_suivante = set()
     image_ancienne = set()
     lecture(fichier_lecure)
-    p = int()
     progression(0, prefix="Chargement des données\t")
     nombre = len(image)
     tag = str(rd.randint(0, nombre))
     tag = "N" + tag
     while len(image) > 0:
-        reponse_str = str()
         image_suivante = comparaison(tag)
         reponse, tag = suivante(image_suivante)
         points += score(image_ancienne, set(tag))
